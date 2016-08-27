@@ -7,7 +7,7 @@ class NoticeMailer < ApplicationMailer
   #
   def sendmail_picture
     @picture = picture
-    mail to: "youpy_yagi0311@yahoo.co.jp"
+    mail to: "youpy_yagi0311@yahoo.co.jp",
     	subject: 'インスタもどきが投稿されました'
   end
 end

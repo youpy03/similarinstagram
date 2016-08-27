@@ -37,7 +37,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'devise'
 gem 'devise-i18n'
-
+gem 'faker'
 
 
 group :development, :test do
@@ -51,6 +51,12 @@ group :development, :test do
   gem 'spring'
 end
 
+
+group :development do
+  gem 'letter_opener'
+  gem 'letter_opener_web'
+ # gem 'dotenv-rails'
+end
 
 
 

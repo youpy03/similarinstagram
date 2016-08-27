@@ -7,6 +7,10 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
+  
+  <div class="field">
+    <%= f.text_field :name, class: "form-control", placeholder: "名前を入力する" %>
+  </div>
 
   <div class="field">
     <%= f.label :password %>

@@ -32,6 +32,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'twitter-bootstrap-rails'
+gem 'rails_12factor', group: :production
+gem 'carrierwave'
+gem 'rmagick'
 
 
 group :development, :test do
@@ -46,5 +49,5 @@ group :development, :test do
 end
 
 
-gem 'rails_12factor', group: :production
+
 

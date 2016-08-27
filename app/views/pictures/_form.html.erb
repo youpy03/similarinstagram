@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<%= form_for(@picture, url: pictures_path) do |f| %>
+	<!-- dive13によってエラーメッセージ書き換え -->
+	<%#= f.error_messages! %>
+
+	<%= f.label :image ,'画像を添付する', class:'btn' %>
+	<%= f.file_field :image %>
+	<br>
+
+<%= f.submit 'POST', class: 'btn btn-primary btn-block' %>
+<% end %>
+
+
+
+<%= link_to "BACK INSTAGRAM HOME", pictures_path %>

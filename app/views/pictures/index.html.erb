@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <h1>INSTAGRAM</h1>
+      <%= link_to "POST", new_picture_path, class: 'btn btn-default' %>
+	
+
+
+	<% @pictures.each do |picture| %>
+	 <div class="row">
+	 	<div class= "field">
+	 		<%= image_tag(picture.image) %>
+	 	</div>
+	 	<div class= "titlefield">
+			<p>#ユーザーID : <%= picture.user_id %></p>
+			<p>#YOU: <%#= picture.user.name %></p>
+		</div>
+		<%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
+        <%= link_to "削除", picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+	 </div>
+	<% end %>
+
+
+  </div>
+</div>

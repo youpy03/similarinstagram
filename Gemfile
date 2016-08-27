@@ -42,6 +42,9 @@ gem 'therubyracer', platforms: :ruby
 gem 'rails_admin'
 #cancanを追加してadminカラムがtrueの場合のみ管理画面へアクセスできるようにしましょう。
 gem 'cancan'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 
 group :development, :test do
@@ -62,7 +65,7 @@ end
 group :development do
   gem 'letter_opener'
   gem 'letter_opener_web'
- # gem 'dotenv-rails'
+  gem 'dotenv-rails'
 end
 
 

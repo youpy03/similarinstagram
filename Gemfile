@@ -35,6 +35,9 @@ gem 'twitter-bootstrap-rails'
 gem 'rails_12factor', group: :production
 gem 'carrierwave'
 gem 'rmagick'
+gem 'devise'
+gem 'devise-i18n'
+
 
 
 group :development, :test do

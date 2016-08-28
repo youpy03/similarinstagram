@@ -1,4 +1,7 @@
-<h2>Change your password</h2>
+<div class="container">
+  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+    <div class=  "footercontainer"><h2>Change your password</h2>
+
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_messages! %>
@@ -23,3 +26,7 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</div>
+</div>
+</div>

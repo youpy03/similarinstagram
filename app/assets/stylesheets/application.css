@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+.container-fluid{
+	height:4em;
+}
+
+.text-change{
+	line-height: 1.5em;
+}
+
+.text-changeother{
+	line-height:2em;
+
+}
+
+.text-center{
+	text-align: center;
+}
+
+img{
+  max-width: 100%;
+}

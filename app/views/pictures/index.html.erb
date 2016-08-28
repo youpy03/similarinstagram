@@ -1,24 +1,53 @@
 <div class="container">
-  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10 text-center instamain">
     <p><%= notice %></p>
-    <h1>INSTAGRAM</h1>
-      <%= link_to "POST", new_picture_path, class: 'btn btn-default' %>
+  
+      <%= link_to new_picture_path, class: 'btn btn-default' do %><div class ="postt">POST</div>
+      <% end %>
+	<br>
+	<br>
+	<br>
+
+<div class="pokepoke">
+<% @pictures.each do |picture| %>
+	<div class = "cards-container">
+	<div class="card">
 	
+	<!--  <div class="row">
+ -->            <div class = "card-header">
+	    <!-- <div class= "titlefield"> -->
+	    		<br><br>
+						<i class="fa fa-user fa-2x fa-fw" aria-hidden="true"></i><i class="fa" aria-hidden="true"><div class ="username-font"><%= picture.user.name %></div></i>
 
+				</div>
+				<br>
+				<br>
+				 	<!-- </div> -->
+				<div class= "card-img">
+				 		<%= image_tag(picture.image) %>
+				</div>
+				 	<!-- div class= "editdeletefield"> -->
+				 <br>
+				 <br>
+				<div class= "card-comments">
+						<%= link_to edit_picture_path(picture.id) do %>
+						   <i class="fa fa-2x fa-pencil-square-o fa-fw" aria-hidden="true"></i>
+						<% end %>
+				        <%= link_to picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？'} do %><i class="fa fa-2x fa-trash" aria-hidden="true"></i>
 
-	<% @pictures.each do |picture| %>
-	 <div class="row">
-	 	<div class= "field">
-	 		<%= image_tag(picture.image) %>
-	 	</div>
-	 	<div class= "titlefield">
-			<p>#ユーザーID : <%= picture.user_id %></p>
-			<p>#YOU: <%#= picture.user.name %></p>
-		</div>
-		<%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
-        <%= link_to "削除", picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+				        <% end %>
+			    </div>
+			    <br>
+			    <br>
+			       <!--  </div> -->
+		        
+        </div>
+	 <!-- </div> -->
+	 
 	 </div>
+	</div>
 	<% end %>
+</div>
 
 
   </div>
